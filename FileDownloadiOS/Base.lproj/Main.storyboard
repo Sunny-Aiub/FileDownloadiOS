@@ -1,24 +1,194 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gk2-oZ-uh2">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Single File Download View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SingleFileDownloadViewController" id="BYZ-38-t0r" customClass="SingleFileDownloadViewController" customModule="FileDownloadiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="af0-CO-Txd">
+                                <rect key="frame" x="32" y="428" width="350" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="nc2-IW-Gud"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="PDF">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnPdfDownloadClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dJX-DO-3Sl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukN-d0-f1Q">
+                                <rect key="frame" x="32" y="500" width="350" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="mbX-cm-kb6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="DOC">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnDocDownloadClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rA0-JE-hDv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYJ-8o-0j7">
+                                <rect key="frame" x="32" y="356" width="350" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="m9n-VY-5rb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="IMAGE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnImageDownloadClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ziZ-Gk-eBb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Download Single File " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Uq-d7-kT8">
+                                <rect key="frame" x="0.0" y="52" width="414" height="50"/>
+                                <color key="backgroundColor" red="0.93059724569320679" green="0.27452105283737183" blue="0.18561512231826782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="jkk-t1-DHu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ukN-d0-f1Q" firstAttribute="top" secondItem="af0-CO-Txd" secondAttribute="bottom" constant="32" id="4Mh-p4-XeH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="af0-CO-Txd" secondAttribute="trailing" constant="32" id="515-X4-X4B"/>
+                            <constraint firstItem="af0-CO-Txd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="7ax-5O-Fcb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ukN-d0-f1Q" secondAttribute="trailing" constant="32" id="95D-eh-Pjq"/>
+                            <constraint firstItem="kYJ-8o-0j7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="BXa-4Z-ZHh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kYJ-8o-0j7" secondAttribute="trailing" constant="32" id="E28-xt-dHW"/>
+                            <constraint firstItem="1Uq-d7-kT8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="I1v-Bk-cjD"/>
+                            <constraint firstItem="af0-CO-Txd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PqA-AL-tq7"/>
+                            <constraint firstItem="af0-CO-Txd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sw2-q3-UGw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Uq-d7-kT8" secondAttribute="trailing" id="dPz-PE-Opg"/>
+                            <constraint firstItem="af0-CO-Txd" firstAttribute="top" secondItem="kYJ-8o-0j7" secondAttribute="bottom" constant="32" id="eQa-9m-nUb"/>
+                            <constraint firstItem="1Uq-d7-kT8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="grv-gk-SGC"/>
+                            <constraint firstItem="ukN-d0-f1Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="mud-Vb-oG2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" systemItem="topRated" id="6Cs-yx-n3c"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="117.85714285714285"/>
+        </scene>
+        <!--Multiple File Download Single File Download View Controller-->
+        <scene sceneID="FFV-QX-MuP">
+            <objects>
+                <viewController storyboardIdentifier="MultipleFileDownloadSingleFileDownloadViewController" id="JUN-Je-J2D" customClass="MultipleFileDownloadSingleFileDownloadViewController" customModule="FileDownloadiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wYI-mV-4eR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HpT-2e-ggW">
+                                <rect key="frame" x="32" y="428" width="350" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Zf7-YI-2nW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="PDF">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6x-pw-jTg">
+                                <rect key="frame" x="32" y="500" width="350" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3wS-g4-IZz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="DOC">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pz4-OT-aE1">
+                                <rect key="frame" x="32" y="356" width="350" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Ive-cz-7hc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="IMAGE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Download Multiple Files " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBR-tR-0cw">
+                                <rect key="frame" x="0.0" y="52" width="414" height="50"/>
+                                <color key="backgroundColor" red="0.93059724569320679" green="0.27452105283737183" blue="0.18561512231826782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="NyZ-nQ-scY"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="eWU-d2-Aeo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KBR-tR-0cw" firstAttribute="top" secondItem="pfN-Dd-yJh" secondAttribute="top" constant="8" id="2aS-Mh-Gjh"/>
+                            <constraint firstItem="HpT-2e-ggW" firstAttribute="centerY" secondItem="wYI-mV-4eR" secondAttribute="centerY" id="AOu-6t-UoJ"/>
+                            <constraint firstItem="Pz4-OT-aE1" firstAttribute="leading" secondItem="pfN-Dd-yJh" secondAttribute="leading" constant="32" id="Dhz-E6-6x3"/>
+                            <constraint firstItem="Y6x-pw-jTg" firstAttribute="top" secondItem="HpT-2e-ggW" secondAttribute="bottom" constant="32" id="QcS-ll-hPq"/>
+                            <constraint firstItem="Y6x-pw-jTg" firstAttribute="leading" secondItem="pfN-Dd-yJh" secondAttribute="leading" constant="32" id="Ri0-zF-rgN"/>
+                            <constraint firstItem="pfN-Dd-yJh" firstAttribute="trailing" secondItem="HpT-2e-ggW" secondAttribute="trailing" constant="32" id="UXR-wZ-qPu"/>
+                            <constraint firstItem="HpT-2e-ggW" firstAttribute="leading" secondItem="pfN-Dd-yJh" secondAttribute="leading" constant="32" id="b36-yi-r0H"/>
+                            <constraint firstItem="HpT-2e-ggW" firstAttribute="top" secondItem="Pz4-OT-aE1" secondAttribute="bottom" constant="32" id="dfG-JW-7hj"/>
+                            <constraint firstItem="KBR-tR-0cw" firstAttribute="trailing" secondItem="pfN-Dd-yJh" secondAttribute="trailing" id="gz2-wr-eRD"/>
+                            <constraint firstItem="HpT-2e-ggW" firstAttribute="centerX" secondItem="wYI-mV-4eR" secondAttribute="centerX" id="uee-sJ-Z2I"/>
+                            <constraint firstItem="KBR-tR-0cw" firstAttribute="leading" secondItem="pfN-Dd-yJh" secondAttribute="leading" id="ww7-O4-CMt"/>
+                            <constraint firstItem="pfN-Dd-yJh" firstAttribute="trailing" secondItem="Pz4-OT-aE1" secondAttribute="trailing" constant="32" id="yNA-ZK-Pfq"/>
+                            <constraint firstItem="pfN-Dd-yJh" firstAttribute="trailing" secondItem="Y6x-pw-jTg" secondAttribute="trailing" constant="32" id="zeF-hE-YZf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pfN-Dd-yJh"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="fZz-T2-9ln"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xhm-jb-4h8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048" y="835"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="8ZW-7m-Gj0">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Gk2-oZ-uh2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="A1z-3L-9X1">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="M0h-Sa-FhL"/>
+                        <segue destination="JUN-Je-J2D" kind="relationship" relationship="viewControllers" id="hGW-Cs-0rq"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E5g-Ec-G4P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
         </scene>
     </scenes>
 </document>
