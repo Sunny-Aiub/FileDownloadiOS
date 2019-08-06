@@ -70,6 +70,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="onj-Ub-7Rp">
+                                <rect key="frame" x="177" y="418" width="60" height="60"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="cUT-CR-n25"/>
+                                    <constraint firstAttribute="height" constant="60" id="sNz-bK-Ge2"/>
+                                </constraints>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <constraints>
@@ -85,11 +94,16 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Uq-d7-kT8" secondAttribute="trailing" id="dPz-PE-Opg"/>
                             <constraint firstItem="af0-CO-Txd" firstAttribute="top" secondItem="kYJ-8o-0j7" secondAttribute="bottom" constant="32" id="eQa-9m-nUb"/>
                             <constraint firstItem="1Uq-d7-kT8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="grv-gk-SGC"/>
+                            <constraint firstItem="onj-Ub-7Rp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h5p-d2-RBv"/>
+                            <constraint firstItem="onj-Ub-7Rp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mf7-oy-RRv"/>
                             <constraint firstItem="ukN-d0-f1Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="mud-Vb-oG2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="topRated" id="6Cs-yx-n3c"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="onj-Ub-7Rp" id="Byd-U5-mGN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -178,6 +192,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Gk2-oZ-uh2" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="A1z-3L-9X1">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
